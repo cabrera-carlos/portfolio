@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ProjectCard from "./components/ProjectCard";
+import { Container, Grid, Typography } from "@mui/material";
+import AppBar from "./components/AppBar";
+import Hero from "./components/Hero";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <AppBar /> */}
+      <Container sx={{ marginY: 5 }}>
+        <Hero />
+        <Typography variant="h4">Projects</Typography>
+        <Grid container spacing={5} sx={{ marginY: 2 }}>
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+        </Grid>
+      </Container>
     </div>
   );
 }
